@@ -1,4 +1,3 @@
-msgbox "happy new year!!"
 Dim Wsh
 Set Wsh = WScript.CreateObject("WScript.Shell")
 WScript.Sleep(0000)
