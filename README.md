@@ -66,7 +66,7 @@ del screen.png
 goto loop
 ```
 3. 点击运行，就可以收到邮件了
-   ![预览](.\img\1.png)
+   ![预览](.\img\1..png)
    点开就是截图
    ![截图](.\img\2.png)
 ---
