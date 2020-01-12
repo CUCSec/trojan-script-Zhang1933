@@ -66,12 +66,13 @@ del screen.png
 goto loop
 ```
 3. 点击运行，就可以收到邮件了
+
    ![预览](.\img\mail.png)
    点开就是截图
    ![截图](.\img\screen.png)
----
----
-4. 然后隐藏黑框的方法：
+
+
+1. 然后隐藏黑框的方法：
    scripts.bat同目录下新建一个记事本并写入如下代码
 ```batch
 Dim Wsh
