@@ -67,9 +67,9 @@ goto loop
 ```
 3. 点击运行，就可以收到邮件了
 
-   ![预览](.\img\mail.png)
+   ![预览](img\mail.png)
    点开就是截图
-   ![截图](.\img\screen.png)
+   ![截图](img\screen.png)
 
 
 1. 然后隐藏黑框的方法：
